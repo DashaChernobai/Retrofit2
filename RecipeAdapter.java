@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
@@ -52,6 +54,9 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
         public void bind(Result result){
             title.setText(result.getTitle());
+            url.setText(result.getHref());
+            ingredients.setText(result.getIngredients());
+            Glide.with(itemView.getContext()).load(result.getThumbnail()).into(logo);
         }
 
 
