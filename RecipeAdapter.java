@@ -21,9 +21,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     public RecipeAdapter() {
     }
 
-
-
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -50,6 +47,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
             super(itemView);
             logo = itemView.findViewById(R.id.logo);
             title = itemView.findViewById(R.id.title);
+            ingredients= itemView.findViewById(R.id.txtIngredients);
         }
 
         public void bind(Result result){
