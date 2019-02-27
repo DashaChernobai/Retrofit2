@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 txtTitle.setText(dataModels.getTitle());
             }
 
+
             @Override
             public void onFailure(Call<DataModel> call, Throwable t) {
                 t.getMessage();
