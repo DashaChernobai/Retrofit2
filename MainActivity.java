@@ -14,8 +14,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView txtTitle,txtUrl;
+    private TextView txtTitle, txtUrl;
     private RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 adapter.setList(dataModels.getResults());
                 recyclerView.setLayoutManager(new LinearLayoutManager(getBaseContext()));
                 recyclerView.setAdapter(adapter);
-
+                adapter.notifyDataSetChanged();
             }
 
 
